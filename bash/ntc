@@ -1,0 +1,5 @@
+#!/bin/bash
+
+command=$("$@")
+output=$(echo "$command" | awk '!/^(\.|\.\.)$/ {print}')
+echo "$output"
